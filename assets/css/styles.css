@@ -13,8 +13,6 @@
   background-position: top;
   background-size: cover;
   position: fixed;
-  -webkit-filter: opacity(2) brightness(1);
-          filter: opacity(2) brightness(1);
   z-index: -1;
   -webkit-filter: blur(20px);
           filter: blur(20px);
