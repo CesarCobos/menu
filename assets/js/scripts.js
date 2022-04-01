@@ -12,7 +12,7 @@ function openNav() {
 
 const d = new Date();
 let day = d.getDay()
-if( day > 4){
+if( day > 4 || day == 0){
     document.getElementById("weekend").style.display = "flex";
     console.log("Es fin de semana!!")
     }else{

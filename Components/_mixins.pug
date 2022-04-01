@@ -7,8 +7,13 @@ mixin menuItem(url,name,icon)
 mixin menu
     .sidebar#mySidebar
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        +menuItem("","Tortas y Tacos","fa-cookie")
-        +menuItem("","Tradicional","fa-utensils")
-        +menuItem("","Platillos","fa-bowl-food")
+        +menuItem("","Tortas y Tacos","fa-drumstick-bite")
+        +menuItem("","Tradicional","fa-pepper-hot")
+        +menuItem("","Platillos","fa-utensils")
         +menuItem("","Postres y Bebidas","fa-glass-water")
         +menuItem("","Descarga el menú","fa-solid fa-cloud-arrow-down")
+
+mixin social-button(link, social,name)
+    .social-button  
+        i.fa-brands(class=social)
+        a(href=link class="return false")=name
