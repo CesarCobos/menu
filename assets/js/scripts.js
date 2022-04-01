@@ -9,3 +9,14 @@ function openNav() {
     document.getElementById("mySidebar").style.width = "0";
     
   }
+
+const d = new Date();
+let day = d.getDay()
+if( day > 4){
+    document.getElementById("weekend").style.display = "flex";
+    console.log("Es fin de semana!!")
+    }else{
+        document.getElementById("weekend").style.display = "none";
+        console.log("Aún no es fin de semana")
+    }
+
