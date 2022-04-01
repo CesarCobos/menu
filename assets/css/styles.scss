@@ -48,126 +48,102 @@ main{
     display: flex;
     justify-content: space-between;
     padding: 0 16px;
+    position: fixed;
 }
 .navbar-left{
-    width: 20%;
-    // background-color: aqua;
-}
-.navbar-center{
-    width: 20%;
-    // background-color: blueviolet;
-}
-.navbar-right{
-    
-    // background-color: cadetblue;
-    display: inherit;
+    width: 72px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
-.menu-download{
-    background-color: rgb(252, 106, 106);
-    border-radius: 4px;
-    border: none;
-    font-size: medium;
-    box-shadow: 0px 0px 5px rgba(65, 65, 65, 0.658);
-    padding: 8px 12px;
-
-    font-weight: 600;
+.navbar-center{
+    width: 20%;
 }
+.navbar-right{
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1.3rem;
+    p span{
+            font-weight: 800;
+    }
+}
+
 a{
     text-decoration: none;
     color: aliceblue;
 }
 
-.portrait{
-    width: 90%;
-    min-height: 200px;
-    background-image: url("https://drive.google.com/uc?export=view&id=1_VnVP-kxyWuiCdsywdL5sUiTQCnrva4k");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(117, 117, 117, 0.288);
-    margin: 32px 0px;
-}
-.daily-menu-container{
-    // height: 300px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px , 350px));
-    grid-template-rows: repeat(auto, 100px);
-    justify-content: center;
-    gap: 16px;
-    padding: 32px 0;
-}
-.daily-menu{
-    width: 100%;
-    min-height: 250px;
-    border-radius: 8px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.menu-1{
-    background-color: rgba(247, 251, 255, 0.5);
-}
-.menu-2{
-    background-color: rgba(255, 221, 127, 0.5);
-}
-.menu-3{
-    background-color: rgba(253, 185, 173, 0.5);
-}
-.menu-content{
-    padding: 8px;
-    p{
-        margin: 16px 0;
-        font-weight: 600;
-    }
-    li{
-        list-style: none;
-        margin: 8px;
-        font-style: italic;
-    }
+
+
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    // top: 0;
+    left: 0;
+    background-color: rgb(252, 124, 124); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 100px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 24px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: flex;
+    transition: 0.5;
+  
+  }
+.menu-button{
+    display: flex;
+    padding: 0px 16px;
+    align-items: center;
     span{
-        font-size: small;
-        font-style: italic;
-      }
-      ul{
-          padding-bottom: 32px;
-      }
-}
-.menu-image{
-    border-radius: 0px 8px 8px 0px;
-}
-.menu-1 .menu-image{
-    background-image: url("https://drive.google.com/uc?export=view&id=1cIuOBrDxwhzergbMWOXxXor9QFGityPV");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-}
-.menu-2 .menu-image{
-    background-image: url("https://drive.google.com/uc?export=view&id=1C-6nlKowXr6NcCYFmoWHOuSS1necqDCJ");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-}
-.menu-3 .menu-image{
-    background-image: url("https://drive.google.com/uc?export=view&id=18P7wNRJtuTu_1M_3oE4EcjRkJ8YTB_Ge");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-}
-.map{
-    width: 100vw;
-    height: 300px;
-    margin: 64px 0;
-    p{
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin: 0 32px;
-        padding: 8px 0;
-    }
-    iframe{
-        width: 100%;
-        height: 100%;
+        font-size: 2rem;
+        text-align: left;
     }
 }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    left:15px;
+    font-size: 2.5rem;
+
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    background-color: transparent;
+  }
+  
+
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (min-width: 768px) {
+    .sidebar {max-width:350px;}
+  }
