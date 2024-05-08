@@ -5,21 +5,14 @@
           box-sizing: border-box;
 }
 
-.background-image {
-  width: 100%;
-  height: 100%;
-  background-image: url("https://drive.google.com/uc?export=view&id=1kRGfTi4c-8Ql6nvGSblg3EsC92P_Teeh");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  position: fixed;
-  z-index: -1;
-  -webkit-filter: blur(20px);
-          filter: blur(20px);
+html {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-html {
-  font-family: Arial, Helvetica, sans-serif;
+HTML::-webkit-scrollbar {
+  display: none;
 }
 
 main {
@@ -38,38 +31,127 @@ main {
           flex-direction: column;
 }
 
-.section-container {
-  width: 100vw;
-  height: auto;
+.w-full {
+  width: 100%;
+}
+
+.max-400 {
+  width: 100%;
+  max-width: 400px;
+}
+
+.h-24 {
+  height: 24px;
+}
+
+.flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: top;
-      -ms-flex-pack: top;
-          justify-content: top;
+}
+
+.flex-col {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.text-light {
+  font-weight: 100;
+}
+
+.text-bold {
+  font-weight: 900;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.items-center {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 16px;
 }
 
-.glasmorph {
-  background: rgba(133, 133, 133, 0.3);
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.p-24 {
+  padding: 24px;
+}
+
+.p-12 {
+  padding: 12px;
+}
+
+.p-64 {
+  padding: 64px;
+}
+
+.mt-128 {
+  margin-top: 128px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid-temp {
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bg-black {
+  background-color: #0a0a0a;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.text-white {
+  color: white;
+}
+
+#full-navbar {
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.advice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 50px;
+  text-align: center;
+  width: 100vw;
+  height: 70vh;
 }
 
 .navbar {
-  height: 80px;
+  height: 128px;
   width: 100%;
-  background-color: aliceblue;
+  background-color: white;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.493);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.493);
   display: -webkit-box;
@@ -123,23 +205,15 @@ a {
 /* The sidebar menu */
 .sidebar {
   height: 100%;
-  /* 100% Full-height */
-  width: 0;
-  /* 0 width - change this with JavaScript */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Stay on top */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
   left: 0;
-  background-color: #fd6262;
-  /* Black*/
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  padding-top: 100px;
-  /* Place content 60px from the top */
+  background-color: rgb(245, 245, 245); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 100px; /* Place content 60px from the top */
   -webkit-transition: 0.5s;
-  transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidebar */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,7 +227,6 @@ a {
 
 /* The sidebar links */
 .sidebar a {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 24px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -182,10 +255,6 @@ a {
 }
 
 /* When you mouse over the navigation links, change their color */
-.menu-button:hover, .menu-button a:hover {
-  color: #f1f1f1;
-}
-
 .menu-button:hover {
   -webkit-transform: translateX(24px);
           transform: translateX(24px);
@@ -211,99 +280,16 @@ a {
   background-color: transparent;
 }
 
-.date {
-  display: none;
-}
-
-.special {
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 80px;
-}
-
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (min-width: 768px) {
   .sidebar {
     max-width: 350px;
   }
-
   .navbar-right {
     margin-right: 48px;
   }
 }
-.banner {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 500px;
-  padding: 32px 0;
-}
-
-.pack {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f1f1f1;
-}
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-}
-
-.map {
-  width: 100%;
-}
-.map iframe {
-  width: 100%;
-  height: 350px;
-}
-
-.map-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 120px;
-  color: aliceblue;
-  font-size: 2.5rem;
-}
-
-.footer-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 150px;
-  background-color: aliceblue;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #000000;
-}
-
 .social-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -324,9 +310,4 @@ footer {
 .social-button i {
   font-size: 2.5rem;
   padding: 8px;
-}
-
-.footer-section a {
-  color: #000000;
-  font-size: 0.875rem;
 }

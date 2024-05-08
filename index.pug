@@ -7,27 +7,26 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="./assets/css/styles.css")
 
-        //- link(rel="preconnect", href="https://fonts.googleapis.com")
-        //- link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+        link(rel="preconnect", href="https://fonts.googleapis.com")
 
         //- //- handwritting
-        //- link(ref="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet")
-
+        link(ref="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet")
         link(rel="shortcut icon", href="https://drive.google.com/uc?export=view&id=15qmMnAgCDWtuE8OKSJ5gAfvo4cMlzg2i", type="image/x-icon")
+
         title Antojitos CANDY
+
     body 
         section.background-image
         header
             include ./Components/_header.pug
         main
-            .banner.special#weekend
-                p Este banner solo aparece los fines de semana!
-                p Hay tamales!!!!
-            .banner.pack 
-                p Aquí va la descripción de los paquetes familiares
-        footer
-            
-            include ./Components/_mapas.pug
+            include ./Components/_main.pug
+            //- .banner.special#weekend
+            //-     p Este banner solo aparece los fines de semana!
+            //-     p Hay tamales!!!!
+            //- .banner.pack 
+            //-     p Aquí va la descripción de los paquetes familiares
+        footer(class="w-full flex flex-col")          
             include ./Components/_footer.pug
             
             
